@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+.app--background {
+  background-image: url('https://cdnb.artstation.com/p/assets/images/images/027/527/147/large/mikhail-sharov-tommy-dog-1080-3.jpg?1591793837');
+  background-size: cover;
+  background-position: center;
+}
+
+.tablet-background {
+  background-image: url('https://cdn.cpx.gg/tablet/tablet-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.full-center {
+  @apply flex items-center justify-center
+}
+
+.hover-effect {
+  @apply transition-all duration-300 ease-in-out
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  &::-webkit-scrollbar {
+    height: 6px;
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply rounded-md bg-transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-gray-300;
+  }
+}
